@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/upload'
+
   resources :alumnus do
     collection { post :import }
   end
