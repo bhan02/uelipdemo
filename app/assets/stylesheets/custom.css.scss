@@ -1,0 +1,37 @@
+
+
+body {
+	background-color: #F5F5F1;
+	color: #333333;
+	font-family: source_sans_prolight, Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;
+}
+
+.container-fluid {
+	width: 100%;
+}
+
+.jumbotron {
+	background-image: url('https://www.dropbox.com/s/a60rf48oymevv9j/alumni.png?raw=1');
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 650px;
+	padding: 0px 0px;
+	h1, h2 {
+    font-family: guardian-egyptt, georgia, serif;
+    color: white;
+  	}
+}
+
+.navbar-default {
+	background-color: #FFFFFF;
+	margin-bottom: 0;
+}
+
+.navbar-default .navbar-brand {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	color: #FF5252;
+	font-size: 30px;
+}
