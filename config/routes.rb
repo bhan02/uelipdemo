@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :alumnus
+  resources :alumnus do
+    collection { post :import }
+  end
   get 'pages/about'
-
   get 'pages/contact'
-
   root 'alumnus#index'
 
 

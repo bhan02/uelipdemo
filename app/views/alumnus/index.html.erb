@@ -1,54 +1,69 @@
-<p id="notice"><%= notice %></p>
-
 <div class="jumbotron">
-  <h2>This is a demo site that contains the UELIP Alumni Network Database.</h2>
-  <p>Please do not share this site with anyone outside of the UELIP Alumni Network board.</p>
+  <div class="container-fluid">
+    <div class="over container body-content">
+      <br>
+      <br>
+      <h2>Welcome to the UELIP Alumni Network Database</h2>
+    </div>
+  </div>
 </div>
 
 <div class="container">
-  <h1>UELIP Alumni</h1>
+  <div class="main-container">
+    <h1>UELIP Alumni</h1>
 
-  <table class="table table-hover table-condensed">
-    <thead>
-      <tr>
-        <th>First name</th>
-        <th>Last name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Term</th>
-        <th>School</th>
-        <th>Current city</th>
-        <th>State</th>
-        <th>Current role</th>
-        <th>Current organization</th>
-        <th>Permission to share contactinfo</th>
-        <th>Do not contact</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @alumnus.each do |alumnu| %>
+    <table class="table table-hover table-condensed table-striped">
+      <thead>
         <tr>
-          <td><%= alumnu.first_name %></td>
-          <td><%= alumnu.last_name %></td>
-          <td><%= alumnu.email %></td>
-          <td><%= alumnu.phone %></td>
-          <td><%= alumnu.term %></td>
-          <td><%= alumnu.school %></td>
-          <td><%= alumnu.current_city %></td>
-          <td><%= alumnu.state %></td>
-          <td><%= alumnu.current_role %></td>
-          <td><%= alumnu.current_organization %></td>
-          <td><%= alumnu.permission_to_share_contactinfo %></td>
-          <td><%= alumnu.do_not_contact %></td>
-          <td><%= link_to 'Show', alumnu, class: "btn btn-link" %></td>
-          <td><%= link_to 'Edit', edit_alumnu_path(alumnu), class: "btn btn-link" %></td>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Term</th>
+          <th>School</th>
+          <th>Current city</th>
+          <th>State</th>
+          <th>Current role</th>
+          <th>Current organization</th>
+          <th>Permission to share contactinfo</th>
+          <th>Do not contact</th>
+          <th colspan="3"></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <%= link_to 'New Alumnus', new_alumnu_path %>
+      </thead>
+
+      <tbody>
+        <% @alumnus.each do |alumnu| %>
+          <tr>
+            <td><%= alumnu.first_name %></td>
+            <td><%= alumnu.last_name %></td>
+            <td><%= alumnu.email %></td>
+            <td><%= alumnu.phone %></td>
+            <td><%= alumnu.term %></td>
+            <td><%= alumnu.school %></td>
+            <td><%= alumnu.current_city %></td>
+            <td><%= alumnu.state %></td>
+            <td><%= alumnu.current_role %></td>
+            <td><%= alumnu.current_organization %></td>
+            <td><%= alumnu.permission_to_share_contactinfo %></td>
+            <td><%= alumnu.do_not_contact %></td>
+            <td><%= link_to 'Show', alumnu, class: "btn btn-link" %></td>
+            <td><%= link_to 'Edit', edit_alumnu_path(alumnu), class: "btn btn-link" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to 'New Alumnus', new_alumnu_path %><br>
+    <br>
+  </div>
+</div>
+
+<div class="container">
+  <h4>Upload Alumni Record CSV</h4>
+
+  <%= form_tag import_alumnus_path, multipart: true do %>
+    <%=file_field_tag :file %><br>
+    <%= submit_tag "Upload", class: "btn btn-primary" %>
+  <% end %>
 </div>
 
 <br>
