@@ -15,6 +15,7 @@ gem 'rails_12factor', group: :production
 gem 'pg', group: :production
 gem "paperclip", "~> 4.2"
 gem "paperclip-dropbox", ">= 1.1.7"
+gem 'searchkick'
 
 group :development, :test do
   gem 'byebug'

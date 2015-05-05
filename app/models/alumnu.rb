@@ -1,5 +1,6 @@
 require 'csv'
 class Alumnu < ActiveRecord::Base
+	searchkick
 
 	def self.import(file)
 		CSV.foreach(file.path, headers: true) do |row|

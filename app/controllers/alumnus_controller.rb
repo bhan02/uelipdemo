@@ -1,6 +1,14 @@
 class AlumnusController < ApplicationController
   before_action :set_alumnu, only: [:show, :edit, :update, :destroy]
 
+  def search
+    if params[:search].present?
+      @alumnus = Alumnu.search(params[:search])
+    else
+      @alumnus = Alumnu.all
+    end
+  end
+  
   # GET /alumnus
   # GET /alumnus.json
   def index

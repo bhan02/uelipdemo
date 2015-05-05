@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get 'pages/upload'
 
   resources :alumnus do
+    collection do
+      get 'search'
+    end
     collection { post :import }
   end
   get 'pages/about'
