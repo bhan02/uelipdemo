@@ -1,32 +1,31 @@
 <div class="jumbotron">
   <div class="container-fluid">
-    <div class="over container body-content">
       <br>
-      <br>
-      <h2>Welcome to the UELIP Alumni Network Database</h2>
-    </div>
+      <h1>Connecting and Supporting</h1> 
+      <h1>Alumni of UELIP</h1>
+
   </div>
 </div>
 
+
 <div class="container">
   <div class="main-container">
-    <h1>UELIP Alumni</h1>
-
-    <table class="table table-hover table-condensed table-striped">
+    <h1>UELIP Alumni Database</h1>
+    <table class="table table-hover table-striped" >
       <thead>
         <tr>
-          <th>First name</th>
-          <th>Last name</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Term</th>
-          <th>School</th>
-          <th>Current city</th>
-          <th>State</th>
-          <th>Current role</th>
-          <th>Current organization</th>
-          <th>Permission to share contactinfo</th>
-          <th>Do not contact</th>
+          <th><%= sortable "first_name", "First Name" %></th>
+          <th><%= sortable "last_name", "Last Name" %></th>
+          <th><%= sortable "email", "Email" %></th>
+          <th><%= sortable "phone", "Phone" %></th>
+          <th><%= sortable "term", "Term" %></th>
+          <th><%= sortable "school", "School" %></th>
+          <th><%= sortable "current_city", "Current City" %></th>
+          <th><%= sortable "state", "State" %></th>
+          <th><%= sortable "current_role", "Current Role" %></th>
+          <th><%= sortable "current_organization", "Current Organization" %></th>
+          <th><%= sortable "permission_to_share_contactinfo", "Permission to Share Contact Info" %></th>
+          <th><%= sortable "do_not_contact", "Do Not Contact" %></th>
           <th colspan="3"></th>
         </tr>
       </thead>
@@ -48,6 +47,7 @@
             <td><%= alumnu.do_not_contact %></td>
             <td><%= link_to 'Show', alumnu, class: "btn btn-link" %></td>
             <td><%= link_to 'Edit', edit_alumnu_path(alumnu), class: "btn btn-link" %></td>
+            <td><%= link_to 'Delete', alumnu, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
           </tr>
         <% end %>
       </tbody>

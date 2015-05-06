@@ -1,4 +1,5 @@
 class AlumnusController < ApplicationController
+  helper_method :sort_column, :sort_direction
   before_action :set_alumnu, only: [:show, :edit, :update, :destroy]
 
   def search
@@ -13,6 +14,7 @@ class AlumnusController < ApplicationController
   # GET /alumnus.json
   def index
     @alumnus = Alumnu.all
+    @alumnus = Alumnu.order(sort_column + " " + sort_direction)
   end
 
   # GET /alumnus/1
@@ -83,5 +85,13 @@ class AlumnusController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def alumnu_params
       params.require(:alumnu).permit(:first_name, :last_name, :email, :phone, :term, :school, :current_city, :state, :current_role, :current_organization, :permission_to_share_contactinfo, :do_not_contact)
+    end
+
+    def sort_column
+      Alumnu.column_names.include?(params[:sort]) ? params[:sort] : "last_name"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end

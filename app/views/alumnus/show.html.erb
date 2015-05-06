@@ -1,64 +1,66 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @alumnu.first_name %>
-</p>
+  <p>
+    <strong>First name:</strong>
+    <%= @alumnu.first_name %>
+  </p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @alumnu.last_name %>
-</p>
+  <p>
+    <strong>Last name:</strong>
+    <%= @alumnu.last_name %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @alumnu.email %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @alumnu.email %>
+  </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @alumnu.phone %>
-</p>
+  <p>
+    <strong>Phone:</strong>
+    <%= @alumnu.phone %>
+  </p>
 
-<p>
-  <strong>Term:</strong>
-  <%= @alumnu.term %>
-</p>
+  <p>
+    <strong>Term:</strong>
+    <%= @alumnu.term %>
+  </p>
 
-<p>
-  <strong>School:</strong>
-  <%= @alumnu.school %>
-</p>
+  <p>
+    <strong>School:</strong>
+    <%= @alumnu.school %>
+  </p>
 
-<p>
-  <strong>Current city:</strong>
-  <%= @alumnu.current_city %>
-</p>
+  <p>
+    <strong>Current city:</strong>
+    <%= @alumnu.current_city %>
+  </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @alumnu.state %>
-</p>
+  <p>
+    <strong>State:</strong>
+    <%= @alumnu.state %>
+  </p>
 
-<p>
-  <strong>Current role:</strong>
-  <%= @alumnu.current_role %>
-</p>
+  <p>
+    <strong>Current role:</strong>
+    <%= @alumnu.current_role %>
+  </p>
 
-<p>
-  <strong>Current organization:</strong>
-  <%= @alumnu.current_organization %>
-</p>
+  <p>
+    <strong>Current organization:</strong>
+    <%= @alumnu.current_organization %>
+  </p>
 
-<p>
-  <strong>Permission to share contactinfo:</strong>
-  <%= @alumnu.permission_to_share_contactinfo %>
-</p>
+  <p>
+    <strong>Permission to share contactinfo:</strong>
+    <%= @alumnu.permission_to_share_contactinfo %>
+  </p>
 
-<p>
-  <strong>Do not contact:</strong>
-  <%= @alumnu.do_not_contact %>
-</p>
+  <p>
+    <strong>Do not contact:</strong>
+    <%= @alumnu.do_not_contact %>
+  </p>
 
-<%= link_to 'Edit', edit_alumnu_path(@alumnu), class: "btn btn-link" %> |
-<%= link_to 'Back', alumnus_path, class: "btn btn-link" %>
+  <%= link_to 'Edit', edit_alumnu_path(@alumnu), class: "btn btn-link" %> |
+  <%= link_to 'Back', alumnus_path, class: "btn btn-link" %>
+</div>
