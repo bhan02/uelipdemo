@@ -34,20 +34,20 @@
       <tbody>
         <% @alumnus.each do |alumnu| %>
           <tr>
-            <td><%= alumnu.first_name %></td>
-            <td><%= alumnu.last_name %></td>
-            <td><%= alumnu.email %></td>
-            <td><%= alumnu.phone %></td>
-            <td><%= alumnu.term %></td>
-            <td><%= alumnu.school %></td>
-            <td><%= alumnu.current_city %></td>
-            <td><%= alumnu.state %></td>
-            <td><%= alumnu.current_role %></td>
-            <td><%= alumnu.current_organization %></td>
-            <td><%= alumnu.permission_to_share_contactinfo %></td>
-            <td><%= alumnu.do_not_contact %></td>
-            <td><%= alumnu.last_updated %></td>
-            <td><%= link_to 'Edit', edit_alumnu_path(alumnu), class: "btn btn-link" %></td>
+            <td style="font-size: 12px;"><%= alumnu.first_name %></td>
+            <td style="font-size: 12px;"><%= alumnu.last_name %></td>
+            <td style="font-size: 12px;"><%= alumnu.email %></td>
+            <td style="font-size: 12px;"><%= alumnu.phone %></td>
+            <td style="font-size: 12px;"><%= alumnu.term %></td>
+            <td style="font-size: 12px;"><%= alumnu.school %></td>
+            <td style="font-size: 12px;"><%= alumnu.current_city %></td>
+            <td style="font-size: 12px;"><%= alumnu.state %></td>
+            <td style="font-size: 12px;"><%= alumnu.current_role %></td>
+            <td style="font-size: 12px;"><%= alumnu.current_organization %></td>
+            <td style="font-size: 12px;"><%= alumnu.permission_to_share_contactinfo %></td>
+            <td style="font-size: 12px;"><%= alumnu.do_not_contact %></td>
+            <td style="font-size: 12px;"><%= alumnu.last_updated %></td>
+            <td style="font-size: 12px;"><%= link_to 'Edit', edit_alumnu_path(alumnu), class: "btn btn-link" %></td>
             
           </tr>
         <% end %>
